@@ -1,1 +1,291 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>The Magic Store</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0714;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: rgba(11, 7, 20, 0.95);
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #302343;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #c99cff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at 50% 30%, #5b2b91 0%, #24143d 35%, #0b0714 70%);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 10vw, 90px);
+      line-height: 1;
+      margin-bottom: 25px;
+      background: linear-gradient(90deg, #ffffff, #d9a8ff, #ffffff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #d5c9df;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 30px;
+      border-radius: 50px;
+      background: #a855f7;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.35);
+    }
+
+    .button:hover {
+      background: #c084fc;
+    }
+
+    section {
+      padding: 70px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .product {
+      background: #171022;
+      border: 1px solid #302343;
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-8px);
+      border-color: #a855f7;
+    }
+
+    .product-icon {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: #aaa0b5;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: 800;
+      color: #d8a4ff;
+    }
+
+    .about {
+      background: #120c1d;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 750px;
+      margin: auto;
+      color: #c8bdcf;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #c8bdcf;
+      margin: 10px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #07040c;
+      color: #80768b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+
+      section {
+        padding: 55px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">✨ The Magic Store</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div>
+        <h1>THE MAGIC STORE</h1>
+
+        <p>
+          Discover something extraordinary.
+          Explore our collection of magical products,
+          unique treasures, and unforgettable experiences.
+        </p>
+
+        <a href="#shop" class="button">Explore the Store ✨</a>
+      </div>
+    </section>
+
+    <section id="shop">
+
+      <h2 class="section-title">Featured Collection</h2>
+
+      <div class="products">
+
+        <div class="product">
+          <div class="product-icon">🔮</div>
+          <h3>Mystic Crystal</h3>
+          <p>A beautiful magical-inspired crystal for your collection.</p>
+          <div class="price">$29.99</div>
+          <a href="#contact" class="button">Learn More</a>
+        </div>
+
+        <div class="product">
+          <div class="product-icon">✨</div>
+          <h3>Magic Box</h3>
+          <p>A mysterious surprise box filled with magical treasures.</p>
+          <div class="price">$39.99</div>
+          <a href="#contact" class="button">Learn More</a>
+        </div>
+
+        <div class="product">
+          <div class="product-icon">🌙</div>
+          <h3>Moon Collection</h3>
+          <p>Beautiful moon-inspired items made for dreamers.</p>
+          <div class="price">$24.99</div>
+          <a href="#contact" class="button">Learn More</a>
+        </div>
+
+        <div class="product">
+          <div class="product-icon">🪄</div>
+          <h3>Magic Wand</h3>
+          <p>A unique decorative wand for your magical collection.</p>
+          <div class="price">$19.99</div>
+          <a href="#contact" class="button">Learn More</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+
+      <h2 class="section-title">About The Magic Store</h2>
+
+      <p>
+        Welcome to The Magic Store — a place where imagination
+        meets discovery. We're creating a unique collection
+        of magical-inspired products for people who believe
+        ordinary things can be extraordinary.
+      </p>
+
+    </section>
+
+    <section class="contact" id="contact">
+
+      <h2 class="section-title">Get In Touch</h2>
+
+      <p>Interested in one of our products?</p>
+
+      <p>📧 Email: your@email.com</p>
+
+      <a href="mailto:your@email.com" class="button">
+        Contact Us
+      </a>
+
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 The Magic Store. All rights reserved. ✨
+  </footer>
+
+</body>
+</html>
